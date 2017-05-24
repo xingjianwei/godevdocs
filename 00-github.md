@@ -15,3 +15,12 @@ git push -u origin master
 git remote add origin https://github.com/xingjianwei/godevdocs.git
 git push -u origin master
 ```
+
+## syncing a fork
+```
+git remote -v
+git remote add upstream https://github.com/ORIGINAL_OWNER/ORIGINAL_REPOSITORY.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+```
