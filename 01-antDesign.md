@@ -63,6 +63,13 @@ npm start
 Visit https://github.com/dvajs/dva to learn more.
 ```
 
+## antd-admin
+
+http://scaffold.ant.design/#/scaffolds/antd-admin
+
+https://github.com/zuiidea/antd-admin
+
+
 ## 基于react的企业后台管理开发框架
 
 https://github.com/xingjianwei/react.git
@@ -77,4 +84,11 @@ npm install
 ## webpack构建ant-design
 
 [参考文档](http://www.cnblogs.com/huangguojin/articles/6702873.html)
+
+## 开发示例
+https://github.com/xingjianwei/dva-example-user-dashboard
+
+https://github.com/sorrycc/blog/issues/18
+
+http://scaffold.ant.design/#/scaffolds/react-antd-admin-jiangxy
 
