@@ -51,7 +51,10 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 ## 使用 dva-cli 进行项目初始化
 
-antd-init@2 仅适用于学习和体验 antd，如果你要开发项目，推荐使用 dva-cli 进行项目初始化。dva 是一个基于 react 和 redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载等，已在生产环境广泛应用。
+antd-init@2 仅适用于学习和体验 antd，如果你要开发项目，推荐使用 dva-cli 进行项目初始化。
+
+[dva](https://github.com/dvajs/dva)是一个基于 react 和 redux 的轻量应用框架，概念来自 elm，支持 side effects、热替换、动态加载等，已在支付宝生产环境广泛应用。
+
 ```
 Usage:
 
@@ -63,12 +66,59 @@ npm start
 Visit https://github.com/dvajs/dva to learn more.
 ```
 
+[示例](https://ant.design/docs/react/practical-projects-cn)
+
 ## antd-admin
 
 http://scaffold.ant.design/#/scaffolds/antd-admin
 
 https://github.com/zuiidea/antd-admin
 
+默认会自动安装roadhog。如果使用到roadhog，且出现接口404
+- 保证package.json里没有roadhog
+- 删除node_modules
+- npm i
+- npm i roadhog@0.6.0-beta.3 -g
+
+开发：
+```
+npm run dev    # 执行roadhog server；使用mock拦截请求，数据存储在localStroge里
+
+打开 http://localhost:8000
+```
+构建：
+```
+npm run build
+
+将会生成dist目录
+```
+代码检测：
+`npm run lint`
+
+项目部署：
+
+https://github.com/zuiidea/antd-admin/issues/269
+
+因为项目中使用到了browserHistory，所以build之后需要部署到服务器上
+
+nginx配置示例：
+```
+server
+	{
+		listen       666;
+		server_name 47.92.30.98;
+		root  /home/www/antd-admin/dist;
+
+		location /api {
+			 proxy_pass http://localhost:8000/api;
+		}
+
+		location / {
+				index  index.html;
+				try_files $uri $uri/ /index.html;
+		}
+	}
+```
 
 ## 基于react的企业后台管理开发框架
 
