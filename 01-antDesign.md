@@ -90,7 +90,8 @@ npm run dev    # 执行roadhog server；使用mock拦截请求，数据存储在
 ```
 npm run build
 
-将会生成dist目录
+将会生成dist目录。可以将dist目录下的文件直接部署到goweb框架中，替换restful获取数据。
+
 ```
 代码检测：
 `npm run lint`
