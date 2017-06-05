@@ -8,8 +8,13 @@
 11044 stars
 
 [版本发布系统](https://github.com/lisijie/gopub)
-
-
+```
+go get -u github.com/astaxie/beego
+go get -u github.com/beego/bee
+go get github.com/beego/i18n
+go get github.com/pkg/sftp
+git clone https://github.com/xingjianwei/gomail.git
+```
 ## Macaron
 
 [Macaron](https://github.com/go-macaron/macaron) 是一个具有高生产力和模块化设计的 Go Web 框架。框架秉承了 Martini 的基本思想，并在此基础上做出高级扩展。
